@@ -1,4 +1,5 @@
 """
+카카오 문 2020 문제, 괄호변환, Level2
 url = https://programmers.co.kr/learn/courses/30/lessons/60058?language=python3
 """
 
@@ -35,7 +36,7 @@ def checkRightString(s):
     return True
 
 
-def doGenerateStringIfStringIsWrong(u, v):
+def generateStringIfStringIsWrong(u, v):
     result = "(" + solution(v) + ")"
     u = u[1:-1]
 
@@ -55,7 +56,7 @@ def solution(p):
 
     if checkRightString(u):
         return u + solution(v)
-    return doGenerateStringIfStringIsWrong(u, v)
+    return generateStringIfStringIsWrong(u, v)
 
 
 if __name__ == "__main__":
