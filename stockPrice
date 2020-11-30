@@ -6,22 +6,20 @@ url = https://programmers.co.kr/learn/courses/30/lessons/42584
 
 def solution(prices):
     answer = []
-    startIndex = 0
-    endIndex = len(prices)
+    size = len(prices)
 
-    for i in range(startIndex, endIndex):
+    for i in range(size):
         indexCount = 0
 
-        for j in range(startIndex + 1, endIndex):
+        for j in range(i + 1, size):
             indexCount += 1
-            if j == endIndex - 1:
+            if j == size - 1:
                 answer.append(indexCount)
                 break
 
             if prices[i] > prices[j]:
                 answer.append(indexCount)
                 break
-        startIndex += 1
     answer.append(0)
 
     return answer
