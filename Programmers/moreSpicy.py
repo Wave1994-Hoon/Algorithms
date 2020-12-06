@@ -21,7 +21,7 @@ def solution(scoville, K):
 
         if K <= scovilleLevel:
 
-            # min() 사용 x: 시간 복잡도 증
+            # min() 사용 x: 시간 복잡도 증가 
             if scoville[0] >= K:
                 return count
     return -1
