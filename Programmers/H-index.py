@@ -1,6 +1,7 @@
 """
 프로그래머스 Sort 문제 Level 2, H-Index 문제
 url = https://programmers.co.kr/learn/courses/30/lessons/42747
+
 """
 
 
@@ -42,5 +43,10 @@ def solution(citations):
 
 
 if __name__ == "__main__":
-    assert solution([3, 0, 6, 1, 5]) == 3
-    assert solution([0, 0, 0, 0]) == 0
+    # TestCase 1
+    citations = [3, 0, 6, 1, 5]
+    assert(solution(citations) == 3)
+
+    # TestCase 2
+    citations = [0, 0, 0, 0]
+    assert(solution(citations) == 0)
