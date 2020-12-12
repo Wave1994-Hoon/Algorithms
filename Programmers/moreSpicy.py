@@ -15,21 +15,18 @@ def solution(scoville, K):
     for i in range(len(scoville) - 1):
         count += 1
         scovilleLevel = heapq.heappop(scoville) + (heapq.heappop(scoville) * 2)
-
-        # heappop으로 나온 element 계산 후 바로 push -> out of index 방지
-        heapq.heappush(scoville, scovilleLevel)
+        heapq.heappush(scoville, scovilleLevel)  # heappop으로 나온 element 계산 후 바로 push -> out of index 방지
 
         if K <= scovilleLevel:
-
-            # min() 사용 x: 시간 복잡도 증가 
-            if scoville[0] >= K:
+            if scoville[0] >= K:  # min() 사용 x: 시간 복잡도 증가
                 return count
+
     return -1
 
 
 if __name__ == "__main__":
     # Case 1
-    scoville = [1, 2, 3, 9, 10 ,12]
+    scoville = [1, 2, 3, 9, 10, 12]
     K = 7
 
     assert(solution(scoville, K) == 2)
