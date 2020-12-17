@@ -6,7 +6,7 @@ url = https://programmers.co.kr/learn/courses/30/lessons/42747
 
 
 
-// TODO: 내장함수 써보기
+//TODO: 내장함수 써보기
 
 def solution(citations):
     hIndex = 0  # 인용
