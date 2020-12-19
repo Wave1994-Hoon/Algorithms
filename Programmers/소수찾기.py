@@ -5,8 +5,6 @@ def solution(numbers):
     nums = generatePermutation(numbers)
     nums = list(set(nums))  # delete duplicated element
 
-    deleteNumber(nums)  # delete 0 and 1 in Numbers
-
     return countPrimeNumber(nums)
 
 
@@ -21,18 +19,13 @@ def generatePermutation(numbers):
     return nums
 
 
-def deleteNumber(numbers, **kwargs):
-    for deletedNumber in kwargs:
-        if numbers.__contains__(deletedNumber):
-            numbers.remove(deletedNumber)
-
-    return numbers
-
-
 def countPrimeNumber(numbers):
     count = 0
 
     for number in numbers:
+        if number == 0 or number == 1:
+            continue
+
         if number == 2 or number == 3:
             count += 1
             continue
