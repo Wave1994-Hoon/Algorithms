@@ -33,5 +33,4 @@ if __name__ == "__main__":
     assert(solution(10, 2) == [4,3])
     assert(solution(8, 1) == [3,3])
     assert(solution(24, 24) == [8,6])
-    print(solution(50, 22))
     assert(solution(50, 22) == [24, 3])

@@ -23,10 +23,10 @@ def countPrimeNumber(numbers):
     count = 0
 
     for number in numbers:
-        if number == 0 or number == 1:
+        if number == 0 or number == 1:  #  0, 1 은 확실하게 소수가 아니기 때문에 건너뜀
             continue
 
-        if number == 2 or number == 3:
+        if number == 2 or number == 3:  #  2, 3 은 소수 이기 때문에 카운트 증가
             count += 1
             continue
 
